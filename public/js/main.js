@@ -1,6 +1,6 @@
 
 jQuery(window).bind('scroll', function (){
-  if (jQuery(window).scrollTop() > 900){
+  if (jQuery(window).scrollTop() > 650){
     jQuery('#main-nav').addClass('navbar-fixed-top');
   } else {
     jQuery('#main-nav').removeClass('navbar-fixed-top');

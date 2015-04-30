@@ -222,21 +222,21 @@ header {
 	min-height: 70px;
 }
 .navigation .navbar .navbar-brand {
-	color: #fff;
+	color: #000;
 	font-size: 40px;
 	font-weight: 700;
 	height: 70px;
 	line-height: 35px;
 }
 .navigation .navbar-default {
-	background-color: #181B3D;
+	background-color: rgb(255, 245, 179);
 	box-shadow: 0 0px 10px rgba(0,0,0,.2);
 	border: none;
 	border-radius: 0;
 	clear: both;
 }
 .navigation .navbar-default .navbar-nav>li>a {
-	color: #fff;
+	color: #000;
 	font-weight: 400;
 	padding-top: 25px;
 	padding-bottom: 25px;
