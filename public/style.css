@@ -307,7 +307,7 @@ header {
 	float: left;
 }
 .featured-item:hover .icon-style {
-	border-radius: 0;
+	border-radius: 5;
 }
 
 
