@@ -42,7 +42,7 @@
 			filter: '',
 			scrollSpeed: 750,
 			scrollOffset: 0,
-			scrollThreshold: 0.5,
+			scrollThreshold: 0.05,
 			begin: false,
 			end: false,
 			scrollChange: false
