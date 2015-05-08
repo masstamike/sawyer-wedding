@@ -663,25 +663,31 @@
                 <div class="form-group">
                   <label for="name" class="sr-only">Name</label>
                   <input type="text" class="form-control" id="name" placeholder="Name"
-                         data-ng-model="rsvpCtrl.name">
-                  {{rsvpCtrl.name}}
+                         data-ng-model="rsvpCtrl.rsvp.name">
+                  {{rsvpCtrl.rsvp.name}}
                 </div> <!-- end .form-group -->
 
                 <div class="form-group">
                   <label for="email" class="sr-only">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Email">
+                  <input type="email" class="form-control" id="email" placeholder="Email"
+                          data-ng-model="rsvpCtrl.rsvp.email">
+                  {{rsvpCtrl.rsvp.email}}
                 </div> <!-- end .form-group -->
 
                 <div class="form-group">
-                  <label for="subject" class="sr-only">Subject</label>
-                  <input type="text" class="form-control" id="subject" placeholder="Subject">
+                  <label for="subject" class="sr-only">Head Count</label>
+                  <input type="number" class="form-control" id="subject" placeholder="0"
+                          data-ng-model="rsvpCtrl.rsvp.count">
+                  {{rsvpCtrl.rsvp.count}}
                 </div> <!-- end .form-group -->
               </div> <!-- end .form> .row> .col-md-4 -->
               
               <div class="col-xs-12 col-md-6">
                 <div class="form-group">
                   <label for="message" class="sr-only">Message</label>
-                  <textarea name="message" id="message" placeholder="Message"></textarea>
+                  <textarea name="message" id="message" placeholder="Message"
+                          data-ng-model="rsvpCtrl.rsvp.message"></textarea>
+                  {{rsvpCtrl.rsvp.message}}
                 </div> <!-- end .form-group -->
               </div>
             </div> <!-- end .form> .row -->

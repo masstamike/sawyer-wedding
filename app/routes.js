@@ -1,19 +1,19 @@
 // app/routes.js
 
 // grab the nerd model
-var Nerd = require('./models/nerd');
+var Guest = require('./models/guest');
 var express = require('express');
 
 module.exports = function(app) {
   
   app.use(express.static(__dirname + '/public')); 
 
-  app.get('/api/nerds', function (req, res) {
-    Nerd.find(function(err, nerds) {
+  app.get('/api/guests', function (req, res) {
+    Guest.find(function(err, guests) {
       if (err)
         res.send(err);
 
-      res.json(nerds);
+      res.json(guests);
     });
   });
 
