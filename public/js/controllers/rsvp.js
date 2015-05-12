@@ -1,6 +1,6 @@
 var rsvpApp = angular.module('rsvpApp', []);
 
-rsvpApp.controller('RsvpController', function () {
+rsvpApp.controller('RsvpController', ['$http', function ($http) {
   var home = this;
   this.author = "Michael Sawyer";
   var rsvp = {};
@@ -9,6 +9,13 @@ rsvpApp.controller('RsvpController', function () {
   rsvp.message = '';
   rsvp.email = '';
 
+  home.submitRsvp = function() {
+    $http.post("/api/guests", home.rsvp).success(function(data, status) {
+      rsvp.name    = '';
+      rsvp.count   =  0;
+      rsvp.message = '';
+      rsvp.email   = '';
+    });
+  };
 
-
-});
+}]);

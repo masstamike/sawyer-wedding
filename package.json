@@ -1,6 +1,7 @@
 {
   "name": "sawyer-wedding",
   "main": "server.js",
+  "version": "0.0.1",
   "dependencies": {
     "express": "~4.5.1",
     "mongoose" : "~3.8.0",
