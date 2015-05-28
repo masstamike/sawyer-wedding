@@ -120,8 +120,9 @@
         <div class="container">
 
           <div class="header">
-            <h1>San Francisco, CA</h1>
-            <p>25 April, 2015</p>
+            <h1>The Engagement</h1>
+            <p>25 April 2015<br>
+            San Francisco, CA</p>
             <div class="underline">
               <i class="fa fa-briefcase"></i>
             </div>
@@ -310,7 +311,7 @@
               <div class="col-sm-7 col-md-6">
                 <div class="content">
                   <h1>The Wedding</h1>
-                  <p style="text-align: center;">24 October, 2015</p>
+                  <p style="text-align: center;">24 October 2015</p>
                   <ul class="list-item">
                     <li><i class="fa fa-table"></i><em>When:</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       2:00PM 24 October, 2015</em></li>
@@ -371,7 +372,7 @@
                       <img src="images/02.jpg" alt="">
                     </div> <!-- end .image -->
                     <div class="content">
-                      <p>I'll take your last name.</p>
+                      <p>#AlmostASawyer</p>
                       <h4>Clarise <strike>Ramirez</strike> Sawyer</h4>
                       <h5>Bride</h5>
                     </div> <!-- end .content -->
@@ -644,7 +645,7 @@
       <div class="footer section-padding" data-ng-app="rsvpApp"
            data-ng-controller="RsvpController as rsvpCtrl">
         <div class="container">
-          <h1>Contact Us</h1>
+          <h1>RSVP</h1>
           <form class="form contact">
 
             <div class="row">
@@ -654,7 +655,6 @@
                   <label for="name" class="sr-only">Name</label>
                   <input type="text" class="form-control" id="name" placeholder="Name"
                          data-ng-model="rsvpCtrl.rsvp.name">
-                  {{rsvpCtrl.rsvp.name}}
                 </div> <!-- end .form-group -->
 
                 <div class="form-group">
@@ -662,7 +662,6 @@
                   <label for="email" class="sr-only">Email</label>
                   <input type="email" class="form-control" id="email" placeholder="Email"
                           data-ng-model="rsvpCtrl.rsvp.email">
-                  {{rsvpCtrl.rsvp.email}}
                 </div> <!-- end .form-group -->
 
                 <div class="form-group">
@@ -670,20 +669,43 @@
                   <label for="subject" class="sr-only">Head Count</label>
                   <input type="number" class="form-control" id="subject" placeholder="0"
                           data-ng-model="rsvpCtrl.rsvp.count">
-                  {{rsvpCtrl.rsvp.count}}
                 </div> <!-- end .form-group -->
               </div> <!-- end .form> .row> .col-md-4 -->
-              
-              <div class="col-xs-12 col-md-6">
+
+              <div class="row download-area">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  Tri-Tip<br>
+                  <label for="subject" class="sr-only">Tri-Tip</label>
+                  <input type="number" class="form-control" id="subject" placeholder="0"
+                         data-ng-model="rsvpCtrl.rsvp.menuBeef">
+                </div> <!-- end .form-group -->
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  Almond Crusted Chicken w/ Pesto<br>
+                  <label for="subject" class="sr-only">
+                    Almond Crusted Chicken w/ Pesto
+                  </label>
+                  <input type="number" class="form-control" id="subject" placeholder="0"
+                         data-ng-model="rsvpCtrl.rsvp.menuChicken">
+                </div> <!-- end .form-group -->
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  Stuffed Portebello w/ Sauce<br>
+                  <label for="subject" class="sr-only">Stuffed Portebello w/ Sauce</label>
+                  <input type="number" class="form-control" id="subject" placeholder="0"
+                         data-ng-model="rsvpCtrl.rsvp.menuVeggie">
+                </div> <!-- end .form-group -->
+              </div>
+
+              <div class="col-xs-12 col-md-12">
                 <div class="form-group">
                   Message to the new couple<br>
                   <label for="message" class="sr-only">Message</label>
-                  <textarea name="message" id="message" placeholder="Message"
+                  <textarea name="message" id="message" placeholder=
+                          "Message from the {{rsvpCtrl.rsvp.name}} family."
                           data-ng-model="rsvpCtrl.rsvp.message"></textarea>
-                  {{rsvpCtrl.rsvp.message}}
                 </div> <!-- end .form-group -->
               </div>
-            </div> <!-- end .form> .row -->
 
             <button class="btn btn-default contact-submit custom-btn"
                     data-ng-click="rsvpCtrl.submitRsvp()">

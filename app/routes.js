@@ -24,10 +24,13 @@ module.exports = function(app) {
 
 
       var rsvp = new Guest({
-        name       : req.body.name,
-        count      : req.body.count,
-        email      : req.body.email,
-        message    : req.body.message
+        name        : req.body.name,
+        count       : req.body.count,
+        email       : req.body.email,
+        message     : req.body.message,
+        menuBeef    : req.body.menuBeef,
+        menuChicken : req.body.menuChicken,
+        menuVeggie  : req.body.menuVeggie
       });
       rsvp.save();
       console.log(guests+1 + " items in database.");

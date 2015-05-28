@@ -8,5 +8,8 @@ module.exports = mongoose.model('Guest', {
   name : {type : String, default: ''},
   count : {type: Number, default: 0},
   message : {type: String, default: ''},
-  email : {type: String, default: ''}
+  email : {type: String, default: ''},
+  menuBeef: {type: Number, default: 0},
+  menuChicken: {type: Number, default: 0},
+  menuVeggie: {type: Number, default: 0}
 });
