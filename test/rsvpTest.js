@@ -5,7 +5,7 @@
 describe('Wedding App', function () {
     var RsvpController,scope,http,httpBackend;
 
-    beforeEach(module('rsvpApp'));
+    beforeEach(module('weddingApp'));
 
     beforeEach(inject(function($injector) {
         httpBackend = $injector.get('$httpBackend');

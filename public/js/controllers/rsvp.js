@@ -1,6 +1,6 @@
-var rsvpApp = angular.module('rsvpApp', []);
+var weddingApp = angular.module('weddingApp', []);
 
-rsvpApp.controller('RsvpController', ['$scope','$http', function ($scope, $http) {
+weddingApp.controller('RsvpController', ['$scope','$http', function ($scope, $http) {
   var home          = $scope;
   $scope.author           = "Michael Sawyer";
   $scope.rsvp             = {};
