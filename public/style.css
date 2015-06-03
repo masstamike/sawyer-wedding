@@ -456,7 +456,7 @@ header {
    8. Section Testimonial                 
 ========================================= */
 #testimonial {
-	background: url(images/bg4.jpg) 50% 0 no-repeat fixed;
+	background: url(images/bg4.jpg) 50% 0 repeat fixed;
 	background-size: cover;
 }
 .bg-testimonial {
