@@ -24,9 +24,19 @@ $(document).ready(function(){
   //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
   //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
   $('#top').parallax("50%", 0.05, true);
-  $('#testimonial').parallax("50%", 0.4, false);
-  $('#download').parallax("50%", 0.4, false);
-})
+  //$('#testimonial').parallax("50%", 0.0, true);
+  $('#download').parallax("50%", 0.05, false);
+});
+
+$(document).ready(function() {
+    $(".fa-circle-thin,.fa-circle").parent().parent().parent().hover(function () {
+        $(this).find("i").removeClass("fa fa-circle-thin");
+        $(this).find("i").addClass("fa fa-circle")
+    }, function () {
+        $(this).find("i").removeClass("fa fa-circle");
+        $(this).find("i").addClass("fa fa-circle-thin");
+    })
+});
 
 
 $(document).ready(function() {
@@ -47,4 +57,3 @@ $(document).ready(function() {
             duration:1000
           });
         });
-
