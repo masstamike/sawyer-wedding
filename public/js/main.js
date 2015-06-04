@@ -1,6 +1,8 @@
 
 jQuery(window).bind('scroll', function (){
-  if (jQuery(window).scrollTop() > 600){
+  var menuTop = $("#eng").offset().top;
+
+  if ($(this).scrollTop() > menuTop){
     jQuery('#main-nav').addClass('navbar-fixed-top');
   } else {
     jQuery('#main-nav').removeClass('navbar-fixed-top');
@@ -21,7 +23,7 @@ $(document).ready(function(){
   //xPosition - Horizontal position of the element
   //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
   //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-  $('#top').parallax("50%", 0.4, false);
+  $('#top').parallax("50%", 0.05, true);
   $('#testimonial').parallax("50%", 0.4, false);
   $('#download').parallax("50%", 0.4, false);
 })
