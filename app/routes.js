@@ -8,14 +8,14 @@ module.exports = function(app) {
   
   app.use(express.static(__dirname + '/public')); 
 
-  app.get('/api/guests', function (req, res) {
+/*  app.get('/api/guests', function (req, res) {
     Guest.find(function(err, guests) {
       if (err)
         res.send(err);
 
       res.json(guests);
     });
-  });
+  });*/
 
   app.post('/api/guests', function (req, res) {
     Guest.count(function(err, guests) {
