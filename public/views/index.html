@@ -720,7 +720,9 @@
     <!-- Skrollr js plugin -->
     <script src="js/skrollr.min.js"></script>
     <script type="text/javascript">
-      var s = skrollr.init({forceHeight: false,smoothScrolling: true, smoothScrollingDuration: 1500});
+      if (screen && screen.width > 480) {
+        var s = skrollr.init({forceHeight: false, smoothScrolling: true, smoothScrollingDuration: 1500});
+      }
     </script>
     
     <!-- Angular Controller -->
