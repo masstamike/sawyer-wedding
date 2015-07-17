@@ -13,17 +13,22 @@ weddingApp.controller('RsvpController', ['$scope','$http', function ($scope, $ht
   home.rsvp.menuVeggie  = 0;
 
   this.submitRsvp = function() {
-    $http.post("/api/guests", home.rsvp).success(function(data, status) {
-      home.rsvp.name        = '';
-      home.rsvp.count       = 0;
-      home.rsvp.message     = '';
-      home.rsvp.email       = '';
-      home.rsvp.menuBeef    = 0;
-      home.rsvp.menuChicken = 0;
-      home.rsvp.menuVeggie  = 0;
-    }).error(function(data, status) {
+    if (home.rsvp.name != '' && home.rsvp.email != '') {
+      $http.post("/api/guests", home.rsvp).success(function (data, status) {
+        home.rsvp.name = '';
+        home.rsvp.count = 0;
+        home.rsvp.message = '';
+        home.rsvp.email = '';
+        home.rsvp.menuBeef = 0;
+        home.rsvp.menuChicken = 0;
+        home.rsvp.menuVeggie = 0;
+        console.log("Return code = " + status);
+        alert("Thank you for RSVPing!");
+      }).error(function (data, status) {
+        alert("Something bad happened...");
         console.log("That sucks...")
-    })
+      })
+    }
   };
 
 }]);
