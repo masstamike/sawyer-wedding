@@ -3,6 +3,13 @@ var weddingApp = angular.module('weddingApp', []);
 weddingApp.controller('RsvpController', ['$scope','$http', function ($scope, $http) {
   var home                = this;
   home.author           = "Michael Sawyer";
+  home.modalEnum        = {
+                            none: null,
+                            success: "Success",
+                            failure: "Failure",
+                            hotel: "Hotel Reservations"
+                          };
+  home.modalSet         = home.modalEnum.none;
   home.rsvp             = {};
   home.rsvp.name        = '';
   home.rsvp.count       = 0;

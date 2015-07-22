@@ -685,6 +685,76 @@
     </footer>
     <!-- ====== End Contact Section ====== -->
 
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+            data-target="#successModal">Open Success Modal</button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+            data-target="#failureModal">Open Failure Modal</button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+            data-target="#hotelModal">Open Hotel Modal</button>
+
+    <!-- ====== Success Modal Section ====== -->
+    <div id="successModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal Content -->
+        <div class="modal-content">
+          <div class="modal-header footer"> <!-- footer centers text -->
+            RSVP
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Thank you for your RSVP. Your reservation has been successfully
+              recorded. We look forward to the honor of your presence on our
+              special day.&hearts;
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====== End Success Modal ====== -->
+
+    <!-- ====== Failure Modal Section ====== -->
+    <div id="failureModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal Content -->
+        <div class="modal-content">
+          <div class="modal-header footer"> <!-- footer centers text -->
+            D'Oh!
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Whoops! Something went wrong. Michael is maintaining this website
+              on his own, so please let him know you got this message, and try
+              again later. Thanks!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====== End Failure Modal ====== -->
+
+    <!-- ====== Hotel Modal Section ====== -->
+    <div id="hotelModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+      </div>
+    </div>
+    <!-- ====== End Hotel Modal ====== -->
 
     <!-- ====== Copyright Section ====== -->
     <section class="copyright dark-bg">
