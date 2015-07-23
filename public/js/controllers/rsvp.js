@@ -30,9 +30,9 @@ weddingApp.controller('RsvpController', ['$scope','$http', function ($scope, $ht
         home.rsvp.menuChicken = 0;
         home.rsvp.menuVeggie = 0;
         console.log("Return code = " + status);
-        alert("Thank you for RSVPing!");
+        $('#successModal').modal();
       }).error(function (data, status) {
-        alert("Something bad happened...");
+        $('#failureModal').modal();
         console.log("That sucks...")
       })
     }
