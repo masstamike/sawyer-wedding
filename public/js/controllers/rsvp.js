@@ -11,6 +11,7 @@ weddingApp.controller('RsvpController', ['$scope','$http', function ($scope, $ht
                           };
   home.modalSet         = home.modalEnum.none;
   home.rsvp             = {};
+  home.rsvp.contact     = '';
   home.rsvp.name        = '';
   home.rsvp.count       = 0;
   home.rsvp.message     = '';
@@ -29,7 +30,6 @@ weddingApp.controller('RsvpController', ['$scope','$http', function ($scope, $ht
         home.rsvp.menuBeef = 0;
         home.rsvp.menuChicken = 0;
         home.rsvp.menuVeggie = 0;
-        console.log("Return code = " + status);
         $('#successModal').modal();
       }).error(function (data, status) {
         $('#failureModal').modal();

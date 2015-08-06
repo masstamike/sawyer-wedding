@@ -25,6 +25,7 @@ module.exports = function(app) {
 
       var rsvp = new Guest({
         name        : req.body.name,
+        contact     : req.body.contact,
         count       : req.body.count,
         email       : req.body.email,
         message     : req.body.message,

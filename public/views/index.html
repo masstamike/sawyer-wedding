@@ -58,7 +58,7 @@
       </div> <!-- end .bg-color -->
     </header>
     <!-- ====== End Header Section ====== -->
-    
+
 
     <!-- ====== Menu Section ====== -->
     <section id="menu">
@@ -346,7 +346,7 @@
                     <div class="content">
                       <p>Soon to be Sawyers</p>
                       <h4>Michael &amp; Clarise</h4>
-                      <h4>Sawyer</h4>
+                      <h5>Sawyer</h5>
                     </div> <!-- end .content -->
                   </div> <!-- end .item (3) -->
 
@@ -455,7 +455,7 @@
           <div class="row">
             <div class="price-list">
 
-              <div class="col-md-4"> 
+              <div class="col-md-4">
                 <div class="price-table">
                   <div class="rate">Hawaii</div>
                   <h2>Honeymoon Donations</h2>
@@ -474,7 +474,7 @@
                 </div> <!-- end .price-table >
               </div> <!-- end .price-list> .col-md-4 (1) >
 
-              <div class="col-md-4"> 
+              <div class="col-md-4">
                 <div class="price-table featured-price">
                   <div class="rate">Booze!</div>
                   <h2>Beer & Wine</h2>
@@ -538,14 +538,14 @@
           </div>
           <div class="social">
             <ul>
-              <li><a class="twitter" href=""><i class="fa fa-twitter"></i></a></li> 
-              <li><a class="facebook" href=""><i class="fa fa-facebook"></i></a></li> 
-              <li><a class="google-plus" href=""><i class="fa fa-google-plus"></i></a></li> 
-              <li><a class="youtube" href=""><i class="fa fa-youtube"></i></a></li> 
-              <li><a class="linkedin" href=""><i class="fa fa-linkedin"></i></a></li> 
-              <li><a class="pinterest" href=""><i class="fa fa-pinterest"></i></a></li> 
-              <li><a class="dribbble" href=""><i class="fa fa-dribbble"></i></a></li> 
-              <li><a class="flickr" href=""><i class="fa fa-flickr"></i></a></li>          
+              <li><a class="twitter" href=""><i class="fa fa-twitter"></i></a></li>
+              <li><a class="facebook" href=""><i class="fa fa-facebook"></i></a></li>
+              <li><a class="google-plus" href=""><i class="fa fa-google-plus"></i></a></li>
+              <li><a class="youtube" href=""><i class="fa fa-youtube"></i></a></li>
+              <li><a class="linkedin" href=""><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="pinterest" href=""><i class="fa fa-pinterest"></i></a></li>
+              <li><a class="dribbble" href=""><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="flickr" href=""><i class="fa fa-flickr"></i></a></li>
             </ul>
           </div>
         </div>
@@ -623,26 +623,38 @@
             <div class="row">
               <div class="col-xs-12 col-md-6">
                 <div class="form-group">
-                  Family Name<br>
+                  First Name<br>
+                  <label for="contact" class="sr-only">Contact</label>
+                  <input type="text" class="form-control" id="contact"
+                         placeholder="Contact" data-ng-model="rsvpCtrl.rsvp.contact">
+                </div> <!-- end .form-group -->
+              </div>
+
+              <div class="col-xs-12 col-md-6">
+                <div class="form-group">
+                  Last Name<br>
                   <label for="name" class="sr-only">Name</label>
                   <input type="text" class="form-control" id="name" placeholder="Name"
                          data-ng-model="rsvpCtrl.rsvp.name">
                 </div> <!-- end .form-group -->
+              </div>
 
-                <div class="form-group">
-                  Email<br>
-                  <label for="email" class="sr-only">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Email"
-                          data-ng-model="rsvpCtrl.rsvp.email">
-                </div> <!-- end .form-group -->
+              <div class="form-group">
+                Email<br>
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email"
+                       data-ng-model="rsvpCtrl.rsvp.email">
+              </div> <!-- end .form-group -->
 
+              <div class="col-xs-12 col-md-6">
                 <div class="form-group">
                   Head Count<br>
                   <label for="headCount" class="sr-only">Head Count</label>
                   <input type="number" class="form-control" id="headCount" placeholder="0"
-                          data-ng-model="rsvpCtrl.rsvp.count">
+                         data-ng-model="rsvpCtrl.rsvp.count">
                 </div> <!-- end .form-group -->
-              </div> <!-- end .form> .row> .col-md-4 -->
+              </div> <!-- end div -->
+
 
               <div class="row download-area">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -675,7 +687,7 @@
                   <label for="message" class="sr-only">Message</label>
                   <textarea name="message" id="message" placeholder=
                           "Message from the {{rsvpCtrl.rsvp.name}} family."
-                          data-ng-model="rsvpCtrl.rsvp.message"></textarea>
+                            data-ng-model="rsvpCtrl.rsvp.message"></textarea>
                 </div> <!-- end .form-group -->
               </div>
 
@@ -683,8 +695,8 @@
                       data-ng-click="rsvpCtrl.submitRsvp()">
                 <i class="fa fa-hand-o-right"></i>SUBMIT
               </button>
-            </div>
-          </form> <!-- end .form -->   
+            </div> <!-- end .row -->
+          </form> <!-- end .form -->
         </div> <!-- end .container -->
       </div> <!-- end .footer -->
     </footer>
@@ -847,7 +859,7 @@
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery.min.js"></script>
     <script src="js/jquery.js"></script>
-    
+
     <!-- Modernizr js -->
     <script src="js/modernizr-latest.js"></script>
 
@@ -873,14 +885,14 @@
         var s = skrollr.init({forceHeight: false, smoothScrolling: true, smoothScrollingDuration: 1500});
       }
     </script>
-    
+
     <!-- Angular Controller -->
     <script src="js/angular.min.js"></script>
     <script src="js/controllers/rsvp.js"></script>
-    
+
     <!-- jQuery One Page Nav Plugin -->
     <script src="js/jquery.nav.js"></script>
-    
+
     <!-- jQuery Pretty Photo Plugin -->
     <script src="js/jquery.prettyPhoto.js"></script>
 
