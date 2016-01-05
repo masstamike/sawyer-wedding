@@ -38,4 +38,8 @@ weddingApp.controller('RsvpController', ['$scope','$http', function ($scope, $ht
     }
   };
 
+  this.uploadFile = function() {
+
+  }
+
 }]);

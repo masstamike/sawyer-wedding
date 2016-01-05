@@ -1,8 +1,12 @@
+"use strict";
 // app/routes.js
 
 // grab the nerd model
-var Guest = require('./models/guest');
+var Guest   = require('./models/guest');
 var express = require('express');
+var multer  = require('multer');
+var fs      = require('fs');
+var upload  = multer({dest: 'public/images/uploads/'})
 
 module.exports = function(app) {
   
@@ -37,6 +41,18 @@ module.exports = function(app) {
       console.log(guests+1 + " items in database.");
       res.json(rsvp);
     })
+  });
+
+  app.post('/images/upload', upload.single('image'), function (req, res) {
+    fs.rename('./public/images/uploads/' + req.file.filename,
+        ('./public/images/uploads/' + req.file.filename + '.jpg'),
+        function(err) {
+          if (err) {
+            console.log(err);
+            throw err;
+          }
+        });
+    res.status(200).send();
   })
 
   app.get('/', function(req, res) {
