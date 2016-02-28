@@ -53,7 +53,7 @@ module.exports = function(app) {
           }
         });
     res.status(200).send();
-  })
+  });
 
   app.get('/', function(req, res) {
     res.sendfile('./public/views/index.html');
